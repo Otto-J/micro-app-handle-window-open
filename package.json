@@ -1,0 +1,10 @@
+{
+  "name": "micro-app demo",
+  "dependencies": {
+    "@micro-zoe/micro-app": "^0.8.10"
+  },
+  "scripts": {
+    "start-base":"cd base-app && npm run serve",
+    "start-child":"cd child-app && npm run serve"
+  }
+}
