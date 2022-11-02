@@ -1,9 +1,5 @@
 <template>
   <div class="about">
-    <micro-app
-      name="app1"
-      url="http://localhost:3000/"
-      baseroute="/my-page"
-    ></micro-app>
+    <micro-app name="app1" url="http://localhost:8082/"></micro-app>
   </div>
 </template>

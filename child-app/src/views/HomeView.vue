@@ -1,18 +1,12 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div>这是子应用的 home 页面，点击下面的按钮会 window.open 打开 about 页面</div>
+    <button @click="goAbout">点击 window.open</button>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-    HelloWorld,
-  },
-});
+<script lang="ts" setup>
+const goAbout = () => {
+  window.open('/about')
+}
 </script>
