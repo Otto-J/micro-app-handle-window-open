@@ -6,7 +6,19 @@
 </template>
 
 <script lang="ts" setup>
+import { useRouter } from 'vue-router';
+
+
+const router=  useRouter()
 const goAbout = () => {
-  window.open('/about')
+  const url = router.resolve({
+    path: '/about',
+    query: {
+      test:1
+    }
+  })
+  // /about?test=1
+  console.log('url',url)
+  window.open(url.href)
 }
 </script>
